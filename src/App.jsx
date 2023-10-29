@@ -1,9 +1,5 @@
 function App() {
-  return (
-    <div className="container xl:max-w-screen-xl">
-      <h1 className="text-3xl bg-red-300">شروع پروژه</h1>
-    </div>
-  );
+  return <h1 className="font-bold">شروع پروژه</h1>;
 }
 
 export default App;
