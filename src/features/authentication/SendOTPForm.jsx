@@ -1,19 +1,25 @@
-import { useState } from "react";
 import TextField from "../../ui/TextField";
+import Loading from "../../ui/Loading";
 
-function SendOTPForm() {
-  const [phoneNumber, setPhoneNumber] = useState("");
-
+function SendOTPForm({ onSubmit, isSendingOtp, phoneNumber, onChange }) {
   return (
     <div>
-      <form className="space-y-10">
+      <form className="space-y-10" onSubmit={onSubmit}>
         <TextField
           label="شماره موبایل"
           name="phoneNumber"
           value={phoneNumber}
-          onChange={(e) => setPhoneNumber(e.target.value)}
+          onChange={onChange}
         />
-        <button className="btn btn--primary w-full">ارسال کد تایید</button>
+        <div>
+          {isSendingOtp ? (
+            <Loading />
+          ) : (
+            <button type="submit" className="btn btn--primary w-full">
+              ارسال کد تایید
+            </button>
+          )}
+        </div>
       </form>
     </div>
   );
