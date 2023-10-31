@@ -1,6 +1,10 @@
 import CompleteProfileFrom from "../features/authentication/CompleteProfileFrom";
 
 function CompleteProfile() {
-  return <CompleteProfileFrom />;
+  return (
+    <div className="container xl:max-w-screen-xl">
+      <CompleteProfileFrom />
+    </div>
+  );
 }
 export default CompleteProfile;
