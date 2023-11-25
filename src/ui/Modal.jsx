@@ -1,11 +1,13 @@
 import { HiOutlineX } from "react-icons/hi";
 import useOutsideClick from "../hooks/useOutsideClick.js";
+import { createPortal } from "react-dom";
 
 function Modal({ open, onClose, title, children }) {
   const ref = useOutsideClick(onClose);
 
   return (
-    open && (
+    open &&
+    createPortal(
       <div
         className="backdrop-blur-sm fixed top-0 left-0
            w-full h-screen bg-secondary-800 bg-opacity-30 z-50"
@@ -27,7 +29,8 @@ function Modal({ open, onClose, title, children }) {
           </div>
           {children}
         </div>
-      </div>
+      </div>,
+      document.body
     )
   );
 }
