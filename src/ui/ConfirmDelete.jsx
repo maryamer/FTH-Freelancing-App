@@ -1,7 +1,7 @@
 function ConfirmDelete({ resourceName, onClose, disabled, onConfirm }) {
   return (
     <div>
-      <h2 className="font-bold text-base mb-8">
+      <h2 className="font-bold text-base mb-8 text-secondary-700">
         آیا از حذف {resourceName} مطمین هستید؟
       </h2>
       <div className="flex justify-between items-center gap-x-16">
