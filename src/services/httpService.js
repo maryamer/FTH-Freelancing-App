@@ -7,12 +7,10 @@ const app = axios.create({
   withCredentials: true,
 });
 
-
 app.interceptors.request.use(
   (res) => res,
   (err) => Promise.reject(err)
 );
-
 
 app.interceptors.response.use(
   (res) => res,
@@ -32,9 +30,6 @@ app.interceptors.response.use(
     return Promise.reject(err);
   }
 );
-
-
-
 
 const http = {
   get: app.get,
