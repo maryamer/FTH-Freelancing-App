@@ -14,7 +14,7 @@ function withOpacity(variableName) {
 
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
-  darkMode: ['class', '[class="dark-mode"]'],
+  darkMode: ["class", '[class="dark-mode"]'],
   theme: {
     extend: {
       colors: {
@@ -49,6 +49,7 @@ export default {
       container: {
         center: true,
         padding: "1rem",
+        maxWidth: "1280px",
       },
       fontFamily: {
         sans: ["Vazir", ...fontFamily.sans],
